@@ -1,7 +1,7 @@
 reset
 
 set terminal postscript eps color enhanced size 5,3.5 font "Times-Roman" 22
-set output 'cache-size.eps'
+set output 'cache_size.eps'
 
 set xlabel 'Operation Number'
 set ylabel "Latency (ms)"
@@ -21,7 +21,8 @@ set tics nomirror out scale 0.75
 #set tmargin at screen 0.90; set bmargin at screen 0.65
 #set ylabel " "
 plot "raw_size_lat.1.log" u 0:($2/1000) t 'raw-size' w l,\
-     "map-size_lat.1.log" u ($2/1000) t 'map-size' w l
+     "map-size_lat.1.log" u ($2/1000) t 'map-size' w l,\
+     "cache-size_lat.1.log" u ($2/1000) t 'cache-size' w l
 
 
 #set tmargin at screen 0.66; set bmargin at screen 0.42

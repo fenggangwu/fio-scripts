@@ -1,0 +1,10 @@
+[global]
+ioengine=sync
+direct=1
+iodepth=1
+log_offset=1
+replay_no_stall=1
+
+read_iolog=read.trace
+
+[job]

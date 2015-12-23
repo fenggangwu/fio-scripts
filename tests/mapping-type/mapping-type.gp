@@ -11,5 +11,5 @@ set tics nomirror out scale 0.75
 
 set multiplot layout 2,1
 
-plot "before_lat.log" u 0:($2/1000) t 'before' w l
-plot "after_lat.log" u 0:($2/1000) t 'after' w l
+plot "before_lat.1.log" u 0:($2/1000) t 'before' w l
+plot "after_lat.1.log" u 0:($2/1000) t 'after' w l

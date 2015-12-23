@@ -1,11 +1,11 @@
 [global]
-readwrite=read
+readwrite=write:4k
 blocksize=4k
 
 direct=1
 ioengine=sync
 log_offset=1
-number_ios=1024
-#number_ios=32768
+number_ios=512
+#number_ios=16384
 
 [job]

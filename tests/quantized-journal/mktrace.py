@@ -15,11 +15,11 @@ args = parser.parse_args()
 
 offset = 64*256*1024*1024
 size = 1024*1024*1024
-step = 16*1024
-nr_ops = 1024
+step = 136*1024
+nr_ops = 134*1024
 
 offsets = range(offset, offset + size, step)
 random.shuffle(offsets)
 offsets = offsets[:nr_ops]
 
-gen_trace('write', args.device, offsets)
+gen_trace('write', args.device, offsets, step)

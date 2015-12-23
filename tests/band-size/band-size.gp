@@ -9,4 +9,4 @@ set xlabel 'Operation Number'
 set border 3 back
 set tics nomirror out scale 0.75
 
-plot 'replay_lat.log' u 0:($2/1000) notitle  w l
+plot 'replay_lat.1.log' u 0:($2/1000) notitle  w l

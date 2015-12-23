@@ -1,9 +1,13 @@
-DEVICE = /dev/sdc
+DEVICE = /dev/sdb
+libzbc_bin = /home/fwu/libzbc/bench_fwu
 
 # Offsets used by several tests.
-LOW_OFFSET=0
-MID_OFFSET=2499999997952
-HIGH_OFFSET=4999983222784
+LOW_OFFSET=17179869184 # start byte of the 64-th zone
+LOW_OFFSET_4KOFF=17179873280 # 4KB offset of the 64-th zone
+MID_OFFSET=4000762036224 #start byte of the 14904-th zone
+MID_OFFSET_4KOFF=4000762040320 # 4KB offset of the 14904-th zone
+HIGH_OFFSET=8001255636992 # start byte of 29808-th zone
+HIGH_OFFSET_4KOFF=8001255641088 # 4KB offset of the 29808-th zone
 
 # Band size estimate and accuracy used by band size detection test.
 ESTIMATE=52428800

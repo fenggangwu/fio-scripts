@@ -1,5 +1,5 @@
 [global]
-readwrite=read
+readwrite=write
 blocksize=4k
 
 direct=1

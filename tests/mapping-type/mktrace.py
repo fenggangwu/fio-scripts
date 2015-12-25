@@ -2,6 +2,7 @@
 
 import argparse
 import sys
+import random
 
 sys.path.append('..')
 
@@ -23,11 +24,18 @@ b2 = range(args.band_b_offset, args.band_b_offset + args.track_size,
 
 offsets = [v for pair in zip(b1, b2) for v in pair]
 
+#random.shuffle(offsets)
+
 args.band_b_offset += args.track_size
 
-b2 = range(args.band_b_offset, args.band_b_offset + args.track_size, args.
+b2_2 = range(args.band_b_offset, args.band_b_offset + args.track_size, args.
            block_size)
 
-offsets += [v for pair in zip(b1, b2) for v in pair]
+offsets += [v for pair in zip(b1, b2_2) for v in pair]
 
 gen_trace('read', args.device, offsets, args.block_size)
+
+
+offsets = b2 + b2_2[0:len(b2_2)/2]
+random.shuffle(offsets)
+gen_trace('write', args.device, offsets, args.block_size)

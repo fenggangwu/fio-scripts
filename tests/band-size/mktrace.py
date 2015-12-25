@@ -16,7 +16,7 @@ parser.add_argument("accuracy", type=int)
 
 args = parser.parse_args()
 
-size = args.estimate * 100
+size = args.estimate * 1024
 
 sequential = range(args.offset, args.offset + size, args.accuracy)
 

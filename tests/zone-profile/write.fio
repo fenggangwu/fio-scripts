@@ -1,0 +1,13 @@
+[global]
+readwrite=write:268431360 # jump to the last block of the next zone
+direct=1
+ioengine=sync
+blocksize=4k
+number_ios=29808
+
+log_avg_msec=10
+write_bw_log=seq-write
+write_lat_log=seq-write
+write_iops_log=seq-write
+
+[job]

@@ -2,7 +2,6 @@ include ../parameters.mk
 
 all:
 	sudo hdparm -a256 -A1 -W0 -Q1 $(DEVICE)
-	sudo fio write.fio --filename=$(DEVICE)
 	sudo fio read.fio --filename=$(DEVICE)
 	gnuplot zone-profile.gp
 	evince zone-profile.eps
@@ -19,5 +18,20 @@ record:
 reset:
 	sudo $(libzbc_bin)/reset_write_ptr_all.sh  $(DEVICE)
 
+plotwrite:
+	gnuplot non-seq-full.gp
+	evince non_seq_full.eps &
+
+replotwrite:
+	gnuplot non-seq-full.gp
+
+plotread:
+	gnuplot zone-profile.gp
+	evince zone-profile.eps &
+
+replotread:
+	gnuplot zone-profile.gp
+
+
 clean:
-	rm -rf *.log *.eps
+	rm  *.log *.eps

@@ -1,0 +1,11 @@
+[global]
+direct=1
+ioengine=sync
+log_offset=1
+replay_no_stall=1
+
+read_iolog=write.trace
+
+runtime=40m
+
+[job]

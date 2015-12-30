@@ -1,3 +1,5 @@
+SHELL:=/bin/bash
+
 DEVICE = /dev/sdb
 libzbc_bin = /home/fwu/libzbc/bench_fwu
 
@@ -35,3 +37,4 @@ DOUBLE_TRACK_SIZE=8388608 # first 8MB of a zone
 BLOCK_SIZE=4096
 
 
+TIMER_RES=1
